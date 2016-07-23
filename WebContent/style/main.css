@@ -1,21 +1,76 @@
 @CHARSET "UTF-8";
-html,body,ul,h1,h2,h3,p,button{padding:0;margin:0;border: none}
+html,body,ul,h1,h2,h3,p,button,ul{padding:0;margin:0;border: none}
 a{text-decoration: none;}
-.hr{width:100%;height:2px;margin:1rem auto}
-header nav{background:#f1f1f1;line-height:2.5rem;height:2.5rem}
+.hr1{width:100%;height:2px;margin:1rem auto}
+.hr2{width:50%;height:2px;margin:0 auto 2rem auto;background:#fff}
+.lef{float:left}
+.rig{float:right}
+h2{font-size:1.7rem;margin-bottom:1.3rem}
+h3{font-size:1.5rem;margin-bottom:1rem}
+p{font-size:1.2rem;letter-spacing: .1rem;line-height: 1.5rem;}
+.clearfix:after{content:"";display:block;clear:both;}
+/* 去掉setion间的间隙 */
+section{font-size:0}
+/* background-attachment=fixed让背景固定 */  
+.main-wrapper{background:#444 url(" ../img/banner.jpg");background-attachment: fixed;
+background-repeat:no-repeat;background-size:cover;background-position:center center;}
+
+header{color:#fff;background:rgba(0,0,0,0.05)}
+header a{color:#fff}
+header nav{line-height:2.5rem;height:2.5rem;background:rgba(0,0,0,0.06)}
 header nav ul{float: right;}
-header nav ul li{display:inline-block;line-height:2.5rem;margin-right:1rem}
+header nav ul li{display:inline-block;line-height:2.5rem;margin-right:1rem;}
 header nav ul li a{display:block;line-height:inherit;}
 header nav .logo{line-height:inherit;float:left;margin-left:2rem;font-size:1.7rem;font-weight: 700;letter-spacing:.4rem}
 .inner p{line-height: 1.5rem} 
-header .banner{height:30rem;background:#b1b1b1}
-.inner{position:relative;max-width:10rem;text-align:center;margin:0 auto;top:6.5rem}
+header .banner{height:38rem;background:transparent;}
+.inner{position:relative;max-width:20rem;text-align:center;margin:0 auto;top:6.5rem}
 .inner button{margin-top:5rem;background:#000000;color:#ffffff;padding:.6rem 1.5rem;}
 .inner span{display:block;margin-top:6rem}
 
-.s1{background:#4e9a9a;height:30rem}
-.s1 .wrapper{max-width:1080px;margin:0 auto;text-align: center;color:#ffffff;padding:6rem 0}
-.s1 .wrapper h2{font-size:1.7rem}
-.s1 .wrapper p{font-size:1.2rem;line-height: 2rem;width:20rem;margin:2rem auto}
-.s1 .hr{background:#ffffff;width:50%}
-.s1 .icon{display:inline-block;width:5rem;height:5rem;background:rgb(9, 105, 105);transform:rotate(45deg);margin:1.5rem}
+.se-banner{background:#4e9a9a;height:30rem}
+.se-banner .wrapper{max-width:1080px;margin:0 auto;text-align: center;color:#ffffff;padding:6rem 0}
+.se-banner .wrapper p{width:20rem;margin:2rem auto}
+.se-banner .hr{background:#ffffff;width:50%}
+.se-banner .icon{display:inline-block;width:5rem;height:5rem;background:rgb(9, 105, 105);transform:rotate(45deg);margin:1.5rem}
+
+.se-show{background:#252f34;color:#fff;}
+.se-show .pic{width:45%}
+.se-show .pic img{width:100%}
+.se-show .txt{width:45%}
+.se-show .txt {padding:8rem 0 0 5rem;}
+/* 内部元素加了浮动，导致父元素塌陷，所以需要清除浮动 */
+/* .preview:after{content: "";display:block;clear: both;}  */
+.txt>*{max-width:90%}
+.preview:nth-child(odd){background-color:rgba(255,255,255,0.01);}
+
+.se-specify{background:#3f3965;color:#ffffff;}
+.wrapper{width:68rem;margin:0 auto}
+.se-specify .highlights{text-align: center}
+.highlights {padding:3rem 8rem}
+.card-group{padding:1rem 6rem}
+/* 用border-box来固定盒子大小 */
+.card{width:50%;padding:3rem;-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;box-sizing:border-box;} 
+.card-group .card:first-child{
+	background:rgba(0,0,0,0.05)
+} 
+.card-group .card:nth-child(2){
+	background:rgba(0,0,0,0.09)
+} 
+.card-group .card:nth-child(3){
+	background:rgba(0,0,0,0.13)
+} 
+.card-group .card:nth-child(4){
+	background:rgba(0,0,0,0.17)
+} 
+.card-group .card:nth-child(5){
+	background:rgba(0,0,0,0.21)
+} 
+.card-group .card:nth-child(6){
+	background:rgba(0,0,0,0.25)
+}
+
+footer{height:11rem;background:rgba(37,47,52,0.9);text-align: center;}
+footer li{display:inline-block;padding:2rem .8rem} 
+footer .copy{padding:2rem;font-size:1.5rem}
